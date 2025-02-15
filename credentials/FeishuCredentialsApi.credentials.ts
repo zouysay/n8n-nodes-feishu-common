@@ -10,6 +10,8 @@ import { IHttpRequestOptions } from 'n8n-workflow/dist/Interfaces';
 export class FeishuCredentialsApi implements ICredentialType {
 	name = 'feishuCredentialsApi';
 	displayName = 'Feishu Credentials API';
+	// @ts-ignore
+	icon = 'file:icon.png';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Base URL',
