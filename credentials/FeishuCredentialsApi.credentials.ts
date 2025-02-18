@@ -58,7 +58,7 @@ export class FeishuCredentialsApi implements ICredentialType {
 			},
 		})) as any;
 
-		console.log('preAuthentication res:', res);
+		// console.log('preAuthentication res:', res);
 
 		if (res.code && res.code !== 0) {
 			throw new Error('授权失败：' + res.code + ', ' + res.msg);
@@ -76,7 +76,7 @@ export class FeishuCredentialsApi implements ICredentialType {
 			...(requestOptions.headers || {}),
 			Authorization: 'Bearer ' + credentials.accessToken,
 		};
-		console.log('authenticate requestOptions:', requestOptions);
+		// console.log('authenticate requestOptions:', requestOptions);
 		// requestOptions.proxy = {
 		// 	host: '127.0.0.1',
 		// 	port: 8000,
