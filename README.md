@@ -35,3 +35,35 @@
 - Edit message
 - Send messages in batches
 - Withdraw messages in batches
+## Cloud Documents
+- Get document plain text content
+- Get document basic information
+- Get all blocks of a document
+- Create document
+- Update block content
+- Update block content
+- Delete block
+- Create block
+- Create nested block
+## Multidimensional table
+- Update multidimensional table metadata
+- Get multidimensional table metadata
+- Create multidimensional table
+- Copy multidimensional table
+- Update data table
+- List data table
+- Delete data table
+- Add data table
+- Update view
+- List view
+- Get view
+- Delete view
+- Add view
+- Update record
+- Query record
+- Delete record
+- Add record
+- Add field
+- List field
+- Delete field
+- Add field
