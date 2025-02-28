@@ -18,12 +18,12 @@ class NodeUtils {
 		return result;
 	}
 
-	static buildUploadFileData(this: IExecuteFunctions, inputDataFieldName: string, index: number = 0): any {
+	static async buildUploadFileData(this: IExecuteFunctions, inputDataFieldName: string, index: number = 0) {
 		const binaryData = this.helpers.assertBinaryData(index, inputDataFieldName);
 		if (!binaryData){
 			throw new Error('未找到二进制数据');
 		}
-		const buffer = this.helpers.getBinaryDataBuffer(index, inputDataFieldName);
+		const buffer = await this.helpers.getBinaryDataBuffer(index, inputDataFieldName);
 
 		return {
 			value: buffer,
