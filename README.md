@@ -1,69 +1,82 @@
+## Knowledge Base
+- Get Knowledge Space List
+- Get Knowledge Space Information
+- Update Knowledge Space Settings
+- Delete Knowledge Space Members
+- Get Knowledge Space Member List
+- Add Knowledge Space Members
+- Update Knowledge Space Node Title
+- Move Knowledge Space Node
+- Get Knowledge Space Node Information
+- Get Knowledge Space Subnode List
+- Create Knowledge Space Node
+- Create Knowledge Space Node Copy
 ## Address Book
-- Search for users
-- Get user information
-- Get user information
-- Get user ID by phone number or email
+- Search User
+- Get User Information
+- Get User Information
+- Get User ID by Phone Number or Email
 ## Spreadsheet
-- Modify spreadsheet properties
-- Get spreadsheet information
-- Create spreadsheet
-- Get worksheet
-- Delete worksheet
-- Copy worksheet
-- Add worksheet
-- Query worksheet
-- Update rows and columns
-- Move rows and columns
-- Insert rows and columns
-- Delete rows and columns
-- Add rows and columns
-- Split cells
-- Set cell style
-- Replace cells
-- Merge cells
-- Find cells
-- Write data
+- Modify Spreadsheet Properties
+- Get Spreadsheet Information
+- Create Spreadsheet
+- Get Worksheet
+- Delete Worksheet
+- Copy Worksheet
+- Add Worksheet
+- Query Worksheet
+- Update Rows and Columns
+- Move Rows and Columns
+- Insert Rows and Columns
+- Delete Rows and Columns
+- Add Rows and Columns
+- Split Cells
+- Set Cell Style
+- Replace Cells
+- Merge Cells
+- Find Cells
+- Write Data
 - Read a single range
 - Insert data
-- Write images
+- Write an image
 - Append data
 ## Message
-- Send message
-- Reply to message
-- Withdraw message
-- Forward message
-- Edit message
-- Send messages in batches
-- Withdraw messages in batches
-## Cloud Documents
-- Get document plain text content
-- Get document basic information
+- Send a message
+- Reply to a message
+- Retract a message
+- Forward a message
+- Edit a message
+- Send a message in batches
+- Retract a message in batches
+## Cloud document
+- Get the plain text content of a document
+- Get basic information about a document
 - Get all blocks of a document
-- Create document
-- Update block content
-- Update block content
-- Delete block
-- Create block
-- Create nested block
+- Create a document
+- Update the content of a block
+- Update the content of a block
+- Delete a block
+- Create a block
+- Create a nested block
 ## Multidimensional table
 - Update multidimensional table metadata
 - Get multidimensional table metadata
-- Create multidimensional table
-- Copy multidimensional table
-- Update data table
-- List data table
-- Delete data table
-- Add data table
-- Update view
-- List view
-- Get view
-- Delete view
-- Add view
-- Update record
-- Query record
-- Delete record
-- Add record
-- Add field
-- List field
-- Delete field
-- Add field
+- Create a multidimensional table
+- Copy a multidimensional table
+- Update a data table
+- List a data table
+- Delete a data table
+- Add a data table
+- Update a view
+- List a view
+- Get a view
+- Delete a view
+- Add a view
+- Update a record
+- Query a record
+- Delete a record
+- Add a record
+- Add a field
+- List a field
+- Delete fields
+- Add new fields
