@@ -26,7 +26,7 @@ export default  {
 		},
 
 		{
-			displayName: '记录ID列表',
+			displayName: '记录ID',
 			name: 'record_id',
 			type: 'string',
 			required: true,

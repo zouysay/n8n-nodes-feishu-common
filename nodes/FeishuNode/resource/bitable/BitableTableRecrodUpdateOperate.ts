@@ -59,7 +59,7 @@ export default  {
 			required: true,
 			default: '{}',
 			description:
-				'参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table-record/create#requestBody',
+				'参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table-record/update#requestBody',
 		},
 	],
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
