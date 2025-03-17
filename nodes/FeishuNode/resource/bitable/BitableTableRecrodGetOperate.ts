@@ -1,9 +1,8 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperations } from '../../../help/type/IResource';
-import NodeUtils from "../../../help/utils/NodeUtils";
 
-export default  {
+export default {
 	name: '查询记录-通过记录ID',
 	value: 'bitable:table:record:get',
 	order: 70,
@@ -57,7 +56,7 @@ export default  {
 			name: 'automatic_fields',
 			type: 'boolean',
 			default: false,
-		}
+		},
 	],
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
 		const app_token = this.getNodeParameter('app_toke', index) as string;
@@ -65,7 +64,7 @@ export default  {
 		const user_id_type = this.getNodeParameter('user_id_type', index) as string;
 		const with_shared_url = this.getNodeParameter('with_shared_url', index) as boolean;
 		const automatic_fields = this.getNodeParameter('automatic_fields', index) as boolean;
-		const record_id = NodeUtils.getNodeJsonData(this, 'record_id', index) as IDataObject;
+		const record_id = this.getNodeParameter('record_id', index) as string;
 
 		return RequestUtils.request.call(this, {
 			method: 'POST',
