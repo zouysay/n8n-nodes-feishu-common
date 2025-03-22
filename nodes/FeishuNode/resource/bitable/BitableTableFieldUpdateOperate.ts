@@ -38,7 +38,7 @@ export default  {
 			name: 'body',
 			type: 'json',
 			required: true,
-			default: '{}',
+			default: '{"field_name":"测试","type":1}',
 			description:
 				'参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table-field/update#requestBody',
 		},

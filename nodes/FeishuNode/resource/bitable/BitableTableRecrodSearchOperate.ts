@@ -57,7 +57,7 @@ export default  {
 			name: 'body',
 			type: 'json',
 			required: true,
-			default: '{}',
+			default: '{"filter":{}}',
 			description:
 				'参考：https://open.feishu.cn/document/uAjLw4CM/ukTMukTMukTM/reference/bitable-v1/app-table-record/search#requestBody',
 		},

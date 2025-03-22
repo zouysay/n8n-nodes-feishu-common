@@ -56,7 +56,7 @@ export default  {
 			name: 'body',
 			type: 'json',
 			required: true,
-			default: '{}',
+			default: '{"fields":{}}',
 			description:
 				'参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table-record/create#requestBody',
 		},

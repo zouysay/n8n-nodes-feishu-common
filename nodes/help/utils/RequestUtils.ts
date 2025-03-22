@@ -1,17 +1,15 @@
 import { IExecuteFunctions, NodeOperationError } from 'n8n-workflow';
-import { IHttpRequestOptions } from 'n8n-workflow/dist/Interfaces';
+import { IRequestOptions } from 'n8n-workflow/dist/Interfaces';
 
 class RequestUtils {
 	static async originRequest(
 		this: IExecuteFunctions,
-		options: IHttpRequestOptions,
+		options: IRequestOptions,
 		clearAccessToken = false,
 	) {
 		const credentials = await this.getCredentials('feishuCredentialsApi');
 
-		options.ignoreHttpStatusErrors = true;
-
-		return this.helpers.httpRequestWithAuthentication.call(this, 'feishuCredentialsApi', options, {
+		return this.helpers.requestWithAuthentication.call(this, 'feishuCredentialsApi', options, {
 			// @ts-ignore
 			credentialsDecrypted: {
 				data: {
@@ -22,9 +20,10 @@ class RequestUtils {
 		});
 	}
 
-	static async request(this: IExecuteFunctions, options: IHttpRequestOptions) {
-		return RequestUtils.originRequest.call(this, options).then((data) => {
+	static async request(this: IExecuteFunctions, options: IRequestOptions) {
+		if (options.json === undefined) options.json = true;
 
+		return RequestUtils.originRequest.call(this, options).then((data) => {
 			const handleResponse = (data: any) => {
 				if (data.code && data.code !== 0) {
 					throw new NodeOperationError(this.getNode(), `Request Error: ${data.code}, ${data.msg} \n ` + JSON.stringify(data.error));

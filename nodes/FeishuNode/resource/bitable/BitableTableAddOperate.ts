@@ -21,7 +21,7 @@ const BitableTableAddOperate: ResourceOperations = {
 			name: 'body',
 			type: 'json',
 			required: true,
-			default: '{}',
+			default: '{"table":{}}',
 			description: '参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table/create',
 		}
 	],
