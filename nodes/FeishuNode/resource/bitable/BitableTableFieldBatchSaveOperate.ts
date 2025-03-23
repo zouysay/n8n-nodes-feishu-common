@@ -26,6 +26,22 @@ export default {
 			description: '多维表格数据表的唯一标识。',
 		},
 		{
+			displayName: '字段定义方式',
+			name: 'type',
+			type: 'options',
+			default: 'field',
+			options: [
+				{
+					name: 'Field',
+					value: 'field',
+				},
+				{
+					name: 'JSON',
+					value: 'json',
+				}
+			]
+		},
+		{
 			displayName: '字段列表',
 			name: 'fieldObject',
 			type: 'fixedCollection',
@@ -145,14 +161,40 @@ export default {
 					],
 				},
 			],
+			displayOptions: {
+				show: {
+					type: ['field']
+				}
+			}
+		},
+		{
+			displayName: '请求体JSON',
+			name: 'body',
+			type: 'json',
+			required: true,
+			default: '[{"field_name":"test", "type": 1}]',
+			description:
+				'参考：https://open.feishu.cn/document/server-docs/docs/bitable-v1/app-table-field/create#requestBody',
+			displayOptions: {
+				show: {
+					type: ['json']
+				}
+			}
 		},
 	],
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
 		const app_token = this.getNodeParameter('app_toke', index) as string;
 		const table_id = this.getNodeParameter('table_id', index) as string;
 
-		const fieldObject = this.getNodeParameter('fieldObject', index) as IDataObject;
-		const fieldList = NodeUtils.getNodeFixedCollection(fieldObject, 'fields');
+		const type = this.getNodeParameter('type', index) as string;
+		let fieldList = [];
+		if (type === "field"){
+			const fieldObject = this.getNodeParameter('fieldObject', index) as IDataObject;
+			fieldList = NodeUtils.getNodeFixedCollection(fieldObject, 'fields');
+		}else{
+			fieldList = NodeUtils.getNodeJsonData(this, "body", index) as IDataObject[];
+		}
+
 		const newFieldList = [];
 		for (const item of fieldList) {
 			let newItem = {
