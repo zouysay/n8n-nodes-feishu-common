@@ -1,10 +1,11 @@
 {
   "name": "n8n-nodes-feishu-lite",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "feishu node",
   "keywords": [
     "n8n-community-node-package",
-    "feishu"
+    "feishu",
+    "飞书"
   ],
   "license": "MIT",
   "homepage": "",

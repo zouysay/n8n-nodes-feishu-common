@@ -1,3 +1,8 @@
+# 安装教程
+参考：https://docs.n8n.io/integrations/community-nodes/installation/
+节点名称：n8n-nodes-feishu-lite
+
+# 功能
 ## 知识库
 - 获取知识空间列表
 - 获取知识空间信息
