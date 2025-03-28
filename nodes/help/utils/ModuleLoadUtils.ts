@@ -12,7 +12,10 @@ class ModuleLoadUtils {
 			const fullpath = path.resolve(dirPath, file);
 			const filepath = path.relative(__dirname, fullpath);
 			const module = require(filepath);
-			modules.push(module.default);
+			modules.push({
+				order: 100,
+				...module.default
+			});
 		}
 
 		return modules;
