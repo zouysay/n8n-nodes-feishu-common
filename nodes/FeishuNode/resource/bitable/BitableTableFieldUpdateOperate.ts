@@ -4,7 +4,7 @@ import { ResourceOperations } from '../../../help/type/IResource';
 import NodeUtils from "../../../help/utils/NodeUtils";
 
 export default  {
-	name: '新增字段',
+	name: '更新字段',
 	value: 'bitable:table:field:update',
 	order: 60,
 	options: [
