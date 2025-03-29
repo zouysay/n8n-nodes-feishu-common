@@ -83,7 +83,9 @@ export class FeishuNode implements INodeType {
 						pairedItem: itemIndex,
 					});
 					continue;
-				} else {
+				}else if (error.name === 'NodeApiError'){
+					throw error
+				}else {
 					throw new NodeOperationError(this.getNode(), error, {
 						message: error.message,
 						itemIndex,

@@ -19,15 +19,6 @@ class RequestUtils {
 					},
 				},
 			})
-			.catch((err) => {
-				if (err?.cause?.error) {
-					throw new Error(
-						`Request Error: ${err?.cause?.error.code}, ${err?.cause?.error.msg} \n ` +
-							JSON.stringify(err?.cause?.error.error),
-					);
-				}
-				throw err;
-			});
 	}
 
 	static async request(this: IExecuteFunctions, options: IRequestOptions) {
