@@ -76,10 +76,15 @@ export class FeishuNode implements INodeType {
 				// This node should never fail but we want to showcase how
 				// to handle errors.
 				if (this.continueOnFail()) {
+					let errorJson = {
+						error: error.message
+					}
+					if (error.name === 'NodeApiError'){
+						errorJson.error = error?.cause?.error
+					}
+
 					returnData.push({
-						json: {
-							error: error.message
-						},
+						json: errorJson,
 						pairedItem: itemIndex,
 					});
 					continue;
