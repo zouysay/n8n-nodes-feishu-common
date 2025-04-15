@@ -65,10 +65,6 @@ const SpreadsheetValuesAppendOperate: ResourceOperations = {
 		const response = await RequestUtils.request.call(this, {
 			method: 'POST',
 			url: `/open-apis/sheets/v2/spreadsheets/${spreadsheetToken}/values_append`,
-			headers: {
-				Authorization: `Bearer ${this.getNodeParameter('accessToken', index)}`,
-				'Content-Type': 'application/json; charset=utf-8',
-			},
 			qs: {
 				insertDataOption,
 			},
