@@ -1,6 +1,7 @@
 import { IDataObject, IExecuteFunctions } from 'n8n-workflow';
 import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperations } from '../../../help/type/IResource';
+import NodeUtils from '../../../help/utils/NodeUtils';
 
 const SpreadsheetValuesAppendOperate: ResourceOperations = {
 	name: '追加数据',
@@ -52,7 +53,7 @@ const SpreadsheetValuesAppendOperate: ResourceOperations = {
 	async call(this: IExecuteFunctions, index: number): Promise<IDataObject> {
 		const spreadsheetToken = this.getNodeParameter('spreadsheetToke', index) as string;
 		const range = this.getNodeParameter('range', index) as string;
-		const values = this.getNodeParameter('values', index) as IDataObject[];
+		const values = NodeUtils.getNodeJsonData(this, 'values', index) as IDataObject[];
 		const insertDataOption = this.getNodeParameter('insertDataOption', index) as string;
 
 		const body: IDataObject = {
