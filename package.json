@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-feishu-lite",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "feishu node",
   "keywords": [
     "n8n-community-node-package",
@@ -57,7 +57,7 @@
     "typescript": "^5.5.3"
   },
   "peerDependencies": {
-    "n8n-workflow": "*"
+    "n8n-workflow": "latest"
   },
   "dependencies": {
     "xml-js": "^1.6.11"
