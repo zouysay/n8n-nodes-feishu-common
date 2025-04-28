@@ -23,7 +23,9 @@ export class FeishuNode implements INodeType {
 			name: 'Feishu Node',
 		},
 		usableAsTool: true,
+		// @ts-ignore
 		inputs: ['main'],
+		// @ts-ignore
 		outputs: ['main'],
 		credentials: [
 			{
