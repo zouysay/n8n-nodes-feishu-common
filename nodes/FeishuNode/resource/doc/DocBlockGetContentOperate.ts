@@ -3,7 +3,7 @@ import RequestUtils from '../../../help/utils/RequestUtils';
 import { ResourceOperations } from '../../../help/type/IResource';
 
 const DocBlockGetContentOperate: ResourceOperations = {
-	name: '更新块的内容',
+	name: '获取块的内容',
 	value: 'doc:block:getContent',
 	options: [
 		{
