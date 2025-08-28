@@ -1,3 +1,7 @@
+本项目是基于 n8n-nodes-feishu-lite 之上进行的二次开发，感谢原作者的开源贡献。在原有功能基础上，增加了更多实用的节点类型和功能支持。
+
+与原项目最大的差别是添加了 Markdown/HTML 内容转换为文档块 
+
 # 安装教程
 参考：https://docs.n8n.io/integrations/community-nodes/installation/
 节点名称：n8n-nodes-feishu-lite
@@ -72,6 +76,7 @@
 - 删除块
 - 创建块
 - 创建嵌套块
+- Markdown/HTML 内容转换为文档块
 ## 日历
 - 搜索日历
 - 查询日历信息

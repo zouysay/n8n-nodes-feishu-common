@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-feishu-lite",
-  "version": "0.3.7",
+  "name": "n8n-nodes-feishu-common",
+  "version": "0.1.0",
   "description": "feishu node",
   "keywords": [
     "n8n-community-node-package",
@@ -10,12 +10,12 @@
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "blowsnow",
-    "email": "im.blowsnow@gmail.com"
+    "name": "zouysay",
+    "email": "zouysay@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/other-blowsnow/n8n-nodes-feishu-lite"
+    "url": "https://github.com/other-blowsnow/n8n-nodes-feishu-common"
   },
   "engines": {
     "node": ">=18.10",
